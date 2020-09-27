@@ -86,4 +86,7 @@ You can pass the following props in the "Responsive" component :
 | screen  | "mobile", "tablet", "desktop", "largeScreen", "wideScreen" | "mobile"  |
 
 
+
+
+
 ### Please star the repo if it helped you!

@@ -14,8 +14,10 @@
   "keywords": [
     "react",
     "responsive",
-    "media-query",
-    "simple-react-responsive"
+    "media query",
+    "simple-react-responsive",
+    "viewport",
+    "react media query"
   ],
   "author": "Dev. Avi",
   "license": "MIT",
@@ -40,9 +42,5 @@
   },
   "files": [
     "dist"
-  ],
-  "dependencies": {
-    "@types/react-responsive": "^8.0.2",
-    "react-responsive": "^8.1.0"
-  }
+  ]
 }

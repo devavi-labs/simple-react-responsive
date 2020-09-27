@@ -1,5 +1,4 @@
 import * as React from 'react'
-import MediaQuery from 'react-responsive'
 
 export interface IResponsiveBreakpoints {
     // Minimum width for mobile devices
@@ -22,7 +21,7 @@ export const defaultResponsiveBreakpoints: IResponsiveBreakpoints = {
     wideScreen: 1920
 }
 
-export const BreakpointsContext = React.createContext(defaultResponsiveBreakpoints)
+export const BreakpointsContext = React.createContext({})
 
 export interface IResponsiveBreakpointsProviderProps {
     breakpoints?: IResponsiveBreakpoints
@@ -39,6 +38,28 @@ export const ResponsiveBreakpointsProvider: React.FC<IResponsiveBreakpointsProvi
 }
 
 export type IResponsiveScreens = "mobile" | "tablet" | "desktop" | "largeScreen" | "wideScreen"
+
+type useMediaQueryProps = {
+    query: string
+}
+const useMediaQuery = ({ query }: useMediaQueryProps) => {
+    const [match, setMatch] = React.useState(false);
+    const canMatch = typeof window === 'object' && typeof window.matchMedia === 'function';
+
+    const queryMedia = React.useCallback(() => {
+        const queryList = window.matchMedia(query);
+        setMatch(queryList?.matches || false);
+        return queryList;
+    }, [canMatch]);
+
+    React.useEffect(() => {
+        if (!canMatch) return
+        const queryList = queryMedia();
+        if (queryList) queryList.onchange = queryMedia
+    }, [queryMedia, canMatch]);
+
+    return match;
+};
 
 export interface IResponsiveProps {
     /**
@@ -70,10 +91,21 @@ export const Responsive: React.FC<IResponsiveProps> = (
         : type === "only" ? breakpoints[upperLevelScreen]! - 1
             : undefined
 
+    const match = useMediaQuery(
+        {
+            query:
+                max !== undefined
+                    ? `(min-width: ${min}px) and (max-width: ${max}px)`
+                    : `(min-width: ${min}px)`
+        }
+    )
+
     return (
-        <MediaQuery minWidth={min} maxWidth={max} >
+        <div style={{
+            display: match ? "block" : "none"
+        }} >
             {children}
-        </MediaQuery>
+        </div>
     )
 }
 
