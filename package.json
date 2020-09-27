@@ -1,6 +1,6 @@
 {
   "name": "simple-react-responsive",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
@@ -11,7 +11,12 @@
     "type": "git",
     "url": "git+https://github.com/devavi-labs/simple-react-responsive.git"
   },
-  "keywords": ["react", "responsive", "media-query", "simple-react-responsive"],
+  "keywords": [
+    "react",
+    "responsive",
+    "media-query",
+    "simple-react-responsive"
+  ],
   "author": "Dev. Avi",
   "license": "ISC",
   "bugs": {
