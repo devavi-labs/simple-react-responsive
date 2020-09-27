@@ -1,4 +1,4 @@
-# Simple React Responsive
+# Simple Responsive React
 
 A simple React component for media query breakpoints.
 
@@ -7,13 +7,13 @@ A simple React component for media query breakpoints.
 ### NPM
 
 ```
-$ npm i simple-react-responsive
+$ npm i simple-responsive-react
 ```
 
 ### Yarn
 
 ```
-$ yarn add simple-react-responsive
+$ yarn add simple-responsive-react
 ```
 
 ## Usage
@@ -24,7 +24,7 @@ After installing, Wrap the root component in "ResponsiveBreakpointsProvider". Th
 
 ```
 import React from 'react'
-import { ResponsiveBreakpointsProvider } from 'simple-react-responsive'
+import { ResponsiveBreakpointsProvider } from 'simple-responsive-react'
 
 const App = () => {
     return (
@@ -44,6 +44,10 @@ Then use "Responsive" component to wrap any component to make it responsive.
 The following code will render the "MyComponent" only in devices with screen size larger than mobile devices.
 
 ```
+import Responsive from 'simple-responsive-react'
+
+...
+
 <Responsive
     type="above"
     screen="mobile"
