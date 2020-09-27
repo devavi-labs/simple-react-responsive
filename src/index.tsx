@@ -70,8 +70,6 @@ export const Responsive: React.FC<IResponsiveProps> = (
         : type === "only" ? breakpoints[upperLevelScreen]! - 1
             : undefined
 
-    console.log(breakpoints)
-
     return (
         <MediaQuery minWidth={min} maxWidth={max} >
             {children}
