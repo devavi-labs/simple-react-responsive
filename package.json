@@ -1,6 +1,6 @@
 {
   "name": "simple-responsive-react",
-  "version": "1.1.0",
+  "version": "1.0.0",
   "description": "A simple React component for media query breakpoints.",
   "main": "dist/index.js",
   "scripts": {
