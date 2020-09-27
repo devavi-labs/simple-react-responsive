@@ -1,7 +1,7 @@
 {
   "name": "simple-react-responsive",
-  "version": "1.0.3",
-  "description": "",
+  "version": "1.0.0",
+  "description": "A simple React component for media query breakpoints.",
   "main": "dist/index.js",
   "scripts": {
     "build": "rollup -c",
@@ -18,7 +18,7 @@
     "simple-react-responsive"
   ],
   "author": "Dev. Avi",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/devavi-labs/simple-react-responsive/issues"
   },
