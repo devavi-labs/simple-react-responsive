@@ -1,0 +1,43 @@
+{
+  "name": "simple-react-responsive",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rollup -c",
+    "start": "rollup -c -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devavi-labs/simple-react-responsive.git"
+  },
+  "keywords": [],
+  "author": "Dev. Avi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devavi-labs/simple-react-responsive/issues"
+  },
+  "homepage": "https://github.com/devavi-labs/simple-react-responsive#readme",
+  "devDependencies": {
+    "@types/react": "^16.9.49",
+    "@types/react-dom": "^16.9.8",
+    "babel-core": "^6.26.3",
+    "babel-runtime": "^6.26.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "rollup": "^2.28.2",
+    "rollup-plugin-typescript2": "^0.27.3",
+    "typescript": "^4.0.3"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@types/react-responsive": "^8.0.2",
+    "react-responsive": "^8.1.0"
+  }
+}
