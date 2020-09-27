@@ -18,7 +18,7 @@ $ yarn add simple-react-responsive
 
 ## Usage
 
-After installing, Wrap the root component in <ResponsiveBreakpointsProvider>. This will provide the default breakpoints inside your app.
+After installing, Wrap the root component in "ResponsiveBreakpointsProvider". This will provide the default breakpoints inside your app.
 
 ### Example
 
@@ -37,11 +37,11 @@ const App = () => {
 export default App
 ```
 
-Then use <Responsive> component to wrap any component to make it responsive.
+Then use "Responsive" component to wrap any component to make it responsive.
 
 ### Example 
 
-The following code will render the <MyComponent> only in devices with screen size larger than mobile devices.
+The following code will render the "MyComponent" only in devices with screen size larger than mobile devices.
 
 ```
 <Responsive
@@ -54,7 +54,7 @@ The following code will render the <MyComponent> only in devices with screen siz
 
 ## Custom Breakpoints
 
-You can define your own breakpoints when you use the <ResponsiveBreakpointsProvider> like
+You can define your own breakpoints when you use the "ResponsiveBreakpointsProvider" like this :
 
 ```
 const customBreakpoints = {
@@ -74,9 +74,12 @@ return (
 
 ## Props
 
-You can pass the following props in the <Responsive> component
+You can pass the following props in the "Responsive" component :
 
 | Name    | Expected values                                            | Default   |
 | ------- | ---------------------------------------------------------- | --------- |
 | type    | "below", "only" or "above"                                 | "above"   |
 | screen  | "mobile", "tablet", "desktop", "largeScreen", "wideScreen" | "mobile"  |
+
+
+### Please star the repo if it helped you!
